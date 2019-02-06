@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Health Insurance</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    @Styles.Render("~/content/css/bundles")
+
+    
+
+
+</head>
+
+<body>
+
+ @Html.Partial("_popupPartial")
+
+    @Html.Partial("_headerPartial")
+  @RenderBody()
+
+   @Html.Partial("_footerPartial")
+
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("Script",required:false)
+</body>
+
+</html>
