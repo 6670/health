@@ -126,6 +126,7 @@
     <Content Include="Content\img\compernow.png" />
     <Content Include="Content\img\get_button.png" />
     <Content Include="Content\img\health.png" />
+    <Content Include="Content\img\li_icon2.png" />
     <Content Include="Content\img\save.png" />
     <Content Include="Content\js\bootstrap.bundle.min.js" />
     <Content Include="Content\js\bootstrap.min.js" />
