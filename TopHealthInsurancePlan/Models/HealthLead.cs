@@ -31,27 +31,18 @@ namespace TopHealthInsurancePlan.Models
         public DateTime Dob { get; set; }
         [Description("Age")]
         public int? Age { get; set; }
-        [Description("Period")]
-        public int Period { get; set; }
-        [Description("Premium Type Id")]
-        public int PremiumTypeId { get; set; }
-        [Description("Insurance Type Id")]
-        public int InsuranceTypeId { get; set; }
+       
         [Description("Family Number")]
         public int? FamilyNumber { get; set; }
         [Description("Smoker")]
         public bool Smoker { get; set; }
-        [Description("Partner Gender")]
-        public string PartnerGender { get; set; }
-        [Description("Amount")]
-        public int? Amount { get; set; }
-        [Description("Cover Type")]
-        // public HealthCoverTypeEnum CoverTypeHealth { get; set; }
+        
+      
+      
+        public int CoverTypeId { get; set; }
 
-
-        public DateTime GeneratedDate { get; set; }
-        [Description("Partner age")]
-        public int? PartnerAge { get; set; }
+        
+       
         [Description("Existing Policy")]
         public bool ExistingPolicy { get; set; }
 

@@ -1,7 +1,8 @@
-﻿
+﻿@model TopHealthInsurancePlan.Models.ThankModel
+
 @{ 
     Layout = "~/views/shared/_layoutHome.cshtml";
 }
 <h1>
-    Thank You
+    Thank You @Model.Title  @Model.FirstName @Model.LastName
 </h1>

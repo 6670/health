@@ -48,9 +48,9 @@ namespace TopHealthInsurancePlan.Models
             public string CompanyCity { get; set; }
             [Description("Company Address")]
             public string CompanyAddress { get; set; }
-          //  [Description("Employee Number")]
-          //  public EmployeeNumberEnum EmployeeNumber { get; set; }
-            [Description("Existing Policy")]
+        [Description("Employee Number")]
+        public int EmployeeNumber { get; set; }
+        [Description("Existing Policy")]
             public bool ExistingPolicy { get; set; }
             [Description("Partner Gender")]
             public string PartnerGender { get; set; }
