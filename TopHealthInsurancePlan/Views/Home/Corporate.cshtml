@@ -3,14 +3,14 @@
 @{
     Layout = "~/views/shared/_layoutHome.cshtml";
 }
-<section class="sliderBody">
+<section class="sliderBody sliderBody-corporate">
     <div class="container bgcolor">
         <div class="row p-2">
             <div class="col-12 col-lg-6 col-md-6 col-sm-12 p-0 position-relative">
-                <div class="slid-leftside pt-17 pl-3">
+                <div class="slid-leftside pt-17 pl-3 responsive-padding">
                     <!-- <img src="img/health.png" class="text-center"> -->
                     <h1>Looking to Compare <span class="d-block">Business Health Insurance</span> </h1>
-                    <ul>
+                    <ul class="d-none d-md-block">
                         <li>Protect your loved ones from <span> £</span> 5* a month.</li>
                         <li>Compare all the Leading UK Insurers.</li>
                         <li>Cheapest policy to suit your individual circumstances</li>
@@ -41,47 +41,49 @@
                         @using (Html.BeginForm("Corporate", "Home", FormMethod.Post, new { id = "healthForm", novalidate = "novalidate" }))
                         {
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0 ">Company Name</label>
                                     @Html.TextBoxFor(m => m.ComplayeeName, new { @class = "form-control contactinput form-control-sm", placeholder = "Company Name", data_validation = "required" })
 
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">No. of Employees</label>
                                     @Html.DropDownListFor(m => m.TotalEmployee, new SelectList(Model.TotalEmpItems, "Value", "Text", Model.TotalEmployee), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
                                 </div>
                             </div>
                             <div class="clearfix"></div>
+
                             <div class="form-row">
-                                <div class="col-md-2 pr-1">
+                                <div class="col-md-2 col-2 pr-1">
                                     <label class="col-form-label-sm p-0 ">Title</label>
                                     @Html.DropDownListFor(m => m.YourTitle, new SelectList(Model.TitleItems, "Value", "Text", Model.YourTitle), new { @class = "form-control contactinput form-control-sm p-0", data_validation = "required" })
                                 </div>
-                                <div class="col-md-4 pl-0">
+                                <div class="col-md-4 col-4 pl-0">
                                     <label class="col-form-label-sm p-0 ">First name</label>
 
                                     @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control contactinput form-control-sm", placeholder = "First Name" ,data_validation = "required" })
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Last name</label>
                                     @Html.TextBoxFor(m => m.LastName, new { @class = "form-control contactinput form-control-sm", placeholder = "Last Name", data_validation = "required" })
                                 </div>
-                                <div class="col-md-6">
+
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Mobile No.</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control contactinput form-control-sm", placeholder = "Mobile No.", data_validation = "ukphone" })
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Alternative No.</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.WorkPhone, new { @class = "form-control contactinput form-control-sm", placeholder = "Alternative No.", data_validation = "ukphone", data_validation_optional = "true" })
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Date of Birth</label>
                                     <div class="input-group">
-                                        <select name="Day" id="dd" class="inputform" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
+                                        <select name="Day" id="dd" class="contactinput col-4 pl-0" type="select-one" tabindex="20" data-validation="required">
                                             <option value="">Day</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
@@ -115,7 +117,7 @@
                                             <option value="30">30</option>
                                             <option value="31">31</option>
                                         </select>
-                                        <select name="Month" class="inputform" type="select-one" style="width:75px; padding:6px 2px;" tabindex="20" data-validation="required">
+                                        <select name="Month" class="contactinput col-4 pl-0" type="select-one" tabindex="20" data-validation="required">
                                             <option value="">Month</option>
                                             <option value="01">Jan</option>
                                             <option value="02">Feb</option>
@@ -130,7 +132,7 @@
                                             <option value="11">Nov</option>
                                             <option value="12">Dec</option>
                                         </select>
-                                        <select class="inputform" name="Year" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
+                                        <select class="contactinput col-4 pl-0" name="Year" type="select-one" tabindex="20" data-validation="required">
                                             <option value="">Year</option>
                                             <option value="2001">2001</option>
                                             <option value="2000">2000</option>
@@ -182,75 +184,24 @@
                                             <option value="1954">1954</option>
                                             <option value="1953">1953</option>
                                             <option value="1952">1952</option>
-                                            @*<option value="1951">1951</option>
-                                                <option value="1950">1950</option>
-                                                <option value="1949">1949</option>
-                                                <option value="1948">1948</option>
-                                                <option value="1947">1947</option>
-                                                <option value="1946">1946</option>
-                                                <option value="1945">1945</option>
-                                                <option value="1944">1944</option>
-                                                <option value="1943">1943</option>
-                                                <option value="1942">1942</option>
-                                                <option value="1941">1941</option>
-                                                <option value="1940">1940</option>
-                                                <option value="1939">1939</option>
-                                                <option value="1938">1938</option>
-                                                <option value="1937">1937</option>
-                                                <option value="1936">1936</option>
-                                                <option value="1935">1935</option>
-                                                <option value="1934">1934</option>
-                                                <option value="1933">1933</option>
-                                                <option value="1932">1932</option>
-                                                <option value="1931">1931</option>
-                                                <option value="1930">1930</option>
-                                                <option value="1929">1929</option>
-                                                <option value="1928">1928</option>
-                                                <option value="1927">1927</option>
-                                                <option value="1926">1926</option>
-                                                <option value="1925">1925</option>
-                                                <option value="1924">1924</option>
-                                                <option value="1923">1923</option>
-                                                <option value="1922">1922</option>
-                                                <option value="1921">1921</option>
-                                                <option value="1920">1920</option>
-                                                <option value="1919">1919</option>
-                                                <option value="1918">1918</option>
-                                                <option value="1917">1917</option>
-                                                <option value="1916">1916</option>
-                                                <option value="1915">1915</option>
-                                                <option value="1914">1914</option>
-                                                <option value="1913">1913</option>
-                                                <option value="1912">1912</option>
-                                                <option value="1911">1911</option>
-                                                <option value="1910">1910</option>
-                                                <option value="1909">1909</option>
-                                                <option value="1908">1908</option>
-                                                <option value="1907">1907</option>
-                                                <option value="1906">1906</option>
-                                                <option value="1905">1905</option>
-                                                <option value="1904">1904</option>
-                                                <option value="1903">1903</option>
-                                                <option value="1902">1902</option>
-                                                <option value="1901">1901</option>
-                                                <option value="1900">1900</option>*@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="validationCustomEmail" class="col-form-label-sm p-0">Email</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control contactinput form-control-sm", placeholder = "Email Address", data_validation = "email" })
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Address</label>
                                     @Html.TextBoxFor(m => m.Address, new { @class = "form-control contactinput form-control-sm", placeholder = "Address", data_validation = "required" })
 
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Post Code</label>
                                     @Html.TextBoxFor(m => m.PostCode, new { @class = "form-control contactinput form-control-sm", placeholder = "Post Code" ,data_validation = "ukpostcode" })
                                 </div>
@@ -291,24 +242,25 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 <section class="container lowerbody">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/apply.png")">
             <h3>Fill up the form above to <br><b>GET A QUOTE</b> </h3>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/compare.png")">
             <h3>Market Leading, Affordable Cover</h3>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/save.png")">
             <h3><b>FREE,</b> No Obligation Quotes.</h3>
         </div>
         <div class="clr"></div>
-        <div class="col-12 text-center p-0">
+        <div class="col-12 text-center p-0 lower-body">
             <h1>Compare <span>the market</span> in seconds! <br>use our fast free service to compare all leading uk life insurance policies </h1>
 
             <a href="#"><img src="@Url.Content("/content/img/get_button.png")"></a>
@@ -320,13 +272,4 @@
 
 @section Script{
 
-    <script>
-
-        (function () {
-
-            $('#datepicker').datepicker({
-                uiLibrary: 'bootstrap4'
-            });
-        })();
-    </script>
 }

@@ -45,9 +45,14 @@ header {
     padding: 60px 20px 0 20px;
     background-position: left;
 }
+.sliderBody-corporate {
+    background: url(../img/corporate-bg.png) no-repeat;
+    padding: 60px 20px 0 20px;
+    background-position: left;
+}
 
 .bgcolor {
-    background: rgba(255, 255, 255, 0.70);
+    background: rgba(255, 255, 255, 0.50);
     border-radius: 10px 10px 0 0;
     margin-top: 20px;
 }
@@ -125,6 +130,7 @@ header {
     font-weight: 600;
     margin: 25px 0 0 0;
     color: #191919;
+    line-height: 38px;
 }
 
 .slid-leftside h1 span {
@@ -185,7 +191,6 @@ footer {
 .footersection ul li {
     float: left;
     color: #fff;
-    padding: 5px 8px;
 }
 
 .footersection ul li a {
@@ -194,6 +199,7 @@ footer {
     font-weight: 400;
     color: #fff;
     font-size: 13px;
+    padding: 5px 8px;
 }
 
 .footersection .copyrightdiv p {
@@ -277,16 +283,17 @@ footer {
     position: absolute;
     width: 100%;
     left: 0;
-    /* top: 34px; */
+    top: 45px;
     padding: 1px 10px;
     font-weight: 300 !important;
     border: none;
     border-radius: 0;
     background-color: #d40000;
-    color: red !important;
+    /* color: red !important; */
     text-align: center;
-    font-size: 13px !important;
+    font-size: 11px !important;
     z-index: 111;
+    color: #ffffff !important;
 }
 
 .newRighterea form {
@@ -315,7 +322,7 @@ strong {
 select.error,
 input.error,textarea.error {
     border: 1px solid #d40000 !important;
-    background: #ffbbbb;
+    background: #fddcdc;
     background-position: right 15px center;
     background-repeat: no-repeat;
     -webkit-box-shadow: none;
@@ -326,7 +333,7 @@ input.error,textarea.error {
 select.valid,
 input.valid ,textarea.valid{
     border: 1px solid #468847 !important;
-    background:#b6f5b6;
+    background:#f3fff3;
     background-position: right 15px center;
     background-repeat: no-repeat;
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
@@ -375,4 +382,63 @@ form.async-validation,
 form.validating-server-side /* deprecated */ {
 }
 
+/*--------------Responsive CSS-------------------*/
 
+@media (max-width: 768px){
+
+    .responsive-padding{
+        padding:0 !important;
+    }
+    .d-none{
+        display:none;
+    }
+    .sliderBody{
+        padding:20px 0 0 0;
+        background:#ffffff
+    }
+    .sliderBody-corporate{
+         padding:20px 0 0 0;
+        background:#ffffff
+    }
+    .brand li {
+        padding: 9px 0 !important;
+        width: 80px;
+    }
+    .slid-leftside ul {
+        margin-top: 4px;
+    }
+    .slid-leftside h1 {
+        font-size: 18px;
+        margin: 35px 0 0 0;
+        line-height: 28px;
+    }
+    .comperNOWpic {
+        display:none;
+    }
+    .form-Section label{
+        font-size:13px;
+    }
+    .contactinput {
+        font-size: 12px;
+        padding-left: 6px;
+        padding-right: 5px;
+    }
+    .lower-body img{
+        width:87%;
+    }
+    .lowerbody h1 {
+        font-size: 19px;
+        line-height: 28px;
+    }
+    .footersection ul{
+        width:100%;
+        margin-bottom:35px;
+    }
+    .card-body{
+      padding: 15px 10px;
+      background:#ececec;
+    }
+    .res-mb-15{
+        margin-bottom:15px;
+    }
+}

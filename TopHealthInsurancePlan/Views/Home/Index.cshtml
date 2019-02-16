@@ -10,10 +10,10 @@
     <div class="container bgcolor">
         <div class="row p-2">
             <div class="col-12 col-lg-6 col-md-6 col-sm-12 p-0 position-relative">
-                <div class="slid-leftside pt-17 pl-3">
+                <div class="slid-leftside pt-17 pl-3 responsive-padding">
                     <!-- <img src="img/health.png" class="text-center"> -->
                     <h1>Looking to Compare <span>Health Insurance</span> </h1>
-                    <ul>
+                    <ul class="d-none d-md-block">
                         <li>Protect your loved ones from <span> £</span> 5* a month.</li>
                         <li>Compare all the Leading UK Insurers.</li>
                         <li>Cheapest policy to suit your individual circumstances</li>
@@ -44,32 +44,34 @@
                         @using (Html.BeginForm("index", "Home", FormMethod.Post, new { id = "healthForm", novalidate = "novalidate" }))
                         {
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0 ">Cover Required For?</label>
                                     @Html.DropDownListFor(m => m.CoverType, new SelectList(Model.CoverTypeItems, "Value", "Text", Model.CoverType.ToString()), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">No. of People on Policy?</label>
                                     @Html.DropDownListFor(m => m.TotalPerson, new SelectList(Model.TotalPersonItems, "Value", "Text", Model.TotalPerson), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
                                 </div>
                             </div>
                             <div class="clearfix"></div>
+
                             <div class="form-row">
-                                <div class="col-md-2 pr-1">
+                                <div class="col-md-2 col-2 pr-1">
                                     <label class="col-form-label-sm p-0 ">Title</label>
 
-                                    @Html.DropDownListFor(m => m.YourTitle, new SelectList(Model.TitleItems, "Value", "Text", Model.YourTitle), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
+                                    @Html.DropDownListFor(m => m.YourTitle, new SelectList(Model.TitleItems, "Value", "Text", Model.YourTitle), new { @class = "form-control contactinput form-control-sm pl-0", data_validation = "required" })
 
                                 </div>
-                                <div class="col-md-4 pl-0">
+                                <div class="col-md-4 col-4 pl-0">
                                     <label class="col-form-label-sm p-0 ">First name</label>
                                     @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control form-control-sm contactinput", placeholder = "First name", data_validation = "required" })
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Last name</label>
                                     @Html.TextBoxFor(m => m.LastName, new { @class = "form-control form-control-sm contactinput", placeholder = "Last name", data_validation = "required" })
                                 </div>
-                                <div class="col-md-6">
+
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Mobile No.</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.HomePhone, new { @class = "form-control form-control-sm contactinput", @type = "tel", placeholder = "Mobile No.", data_validation = "ukphone" })
@@ -78,16 +80,17 @@
 
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Alternative No.</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.WorkPhone, new { @class = "form-control form-control-sm contactinput", @type = "tel", placeholder = "Alternative No.", data_validation = "ukphone" ,data_validation_optional = "true" })
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+
+                                <div class="col-md-6 col-6">
                                     <label for="validationNumber" class="col-form-label-sm p-0">Date of Birth</label>
                                     <div class="input-group">
-                                        <select name="Day" id="dd" class="inputform col-4 pl-0" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
+                                        <select name="Day" id="dd" class="contactinput col-4 pl-0" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
                                             <option value="">Day</option>
                                             <option value="01">01</option>
                                             <option value="02">02</option>
@@ -121,7 +124,7 @@
                                             <option value="30">30</option>
                                             <option value="31">31</option>
                                         </select>
-                                        <select name="Month" class="inputform col-4 pl-0" type="select-one" style="width:75px; padding:6px 2px;" tabindex="20" data-validation="required">
+                                        <select name="Month" class="contactinput col-4 pl-0" type="select-one" style="width:75px; padding:6px 2px;" tabindex="20" data-validation="required">
                                             <option value="">Month</option>
                                             <option value="01">Jan</option>
                                             <option value="02">Feb</option>
@@ -136,7 +139,7 @@
                                             <option value="11">Nov</option>
                                             <option value="12">Dec</option>
                                         </select>
-                                        <select class="inputform col-4 pl-0" name="Year" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
+                                        <select class="contactinput col-4 pl-0" name="Year" type="select-one" style="width:75px;" tabindex="20" data-validation="required">
                                             <option value="">Year</option>
                                             <option value="2001">2001</option>
                                             <option value="2000">2000</option>
@@ -192,7 +195,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label for="validationCustomEmail" class="col-form-label-sm p-0">Email</label>
                                     <div class="input-group">
                                         @Html.TextBoxFor(m => m.Email, new { @class = "form-control contactinput form-control-sm", placeholder = "Email", data_validation = "email" })
@@ -200,26 +203,26 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Address</label>
                                     @Html.TextBoxFor(m => m.Address, new { @class = "form-control contactinput form-control-sm", placeholder = "Address", data_validation = "required" })
 
 
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Post Code</label>
                                     @Html.TextBoxFor(m => m.PostCode, new { @class = "form-control contactinput form-control-sm", placeholder = "Post Code", data_validation = "ukpostcode" })
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0 ">Existing Policy</label>
                                     @Html.DropDownListFor(m => m.ExistingPolicy, new SelectList(Model.ExistingPolicyItems, "Value", "Text", Model.ExistingPolicy), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
 
 
                                     
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-6">
                                     <label class="col-form-label-sm p-0">Smoker</label>
                                     @Html.DropDownListFor(m => m.Smoker, new SelectList(Model.SmokerItems, "Value", "Text", Model.Smoker), new { @class = "form-control contactinput form-control-sm", data_validation = "required" })
 
@@ -251,20 +254,20 @@
 
 <section class="container lowerbody">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/apply.png")">
             <h3>Fill up the form above to <br><b>GET A QUOTE</b> </h3>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/compare.png")">
             <h3>Market Leading, Affordable Cover</h3>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 res-mb-15">
             <img src="@Url.Content("/content/img/save.png")">
             <h3><b>FREE,</b> No Obligation Quotes.</h3>
         </div>
         <div class="clr"></div>
-        <div class="col-12 text-center p-0">
+        <div class="col-12 text-center p-0 lower-body">
             <h1>Compare <span>the market</span> in seconds! <br>use our fast free service to compare all leading uk life insurance policies </h1>
 
             <a href="#"><img src="@Url.Content("/content/img/get_button.png")"></a>
