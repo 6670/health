@@ -19,8 +19,11 @@ namespace TopHealthInsurancePlan.App_Start
 
             //use Include() method to add all the script files with their paths 
             scriptJs.Include(
-                                "~/content/js/jquery-1.11.1.min.js",
-                                "~/content/js/bootstrap.min.js",
+                                "~/content/js/jquery.3.3.1.min.js",
+                                "~/content/js/jquery.validate.min.js",
+                                 "~/content/js/popper.js",
+                                "~/content/js/bootstrap.bundle.min.js",
+                                  "~/content/js/bootstrap.min.js",
                                 "~/content/js/jquery.validate.min.js",
                               
                                 "~/content/js/validation.js",
