@@ -18,6 +18,27 @@ namespace TopHealthInsurancePlan
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+           name: "Health",
+           url: "health",
+           defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+       );
+            routes.MapRoute(
+          name: "CorporateHealth",
+          url: "corporatehealth",
+          defaults: new { controller = "Home", action = "Corporate", id = UrlParameter.Optional }
+      );
+            routes.MapRoute(
+          name: "CpntactUs",
+          url: "Contactus",
+          defaults: new { controller = "Home", action = "ContactUs", id = UrlParameter.Optional }
+      );
+            routes.MapRoute(
+          name: "Thank",
+          url: "thank",
+          defaults: new { controller = "Home", action = "thank", id = UrlParameter.Optional }
+      );
         }
     }
 }

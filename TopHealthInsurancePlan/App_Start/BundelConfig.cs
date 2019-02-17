@@ -21,28 +21,25 @@ namespace TopHealthInsurancePlan.App_Start
             scriptJs.Include(
                                 "~/content/js/jquery.3.3.1.min.js",
                                 "~/content/js/jquery.validate.min.js",
-                                 "~/content/js/popper.js",
+                                "~/content/js/popper.js",
                                 "~/content/js/bootstrap.bundle.min.js",
-                                  "~/content/js/bootstrap.min.js",
-                                "~/content/js/jquery.validate.min.js",
-                              
+                                "~/content/js/bootstrap.min.js",
+                                "~/content/js/jquery.validate.min.js",                             
                                 "~/content/js/validation.js",
                                 "~/content/js/custom.js"
                               );
 
             styleCss.Include(
-                "~/content/css/bootstrap.min.css",
+                 "~/content/css/bootstrap.min.css",
                  "~/content/css/bootstrap-reboot.min.css",
                  "~/content/css/normalize.css",
                  "~/content/css/style.css"
                  );
 
-            ////Add the bundle into BundleCollection
 
+            ////Add the bundle into BundleCollection
             bundles.Add(styleCss);
             bundles.Add(scriptJs);
-
-
             BundleTable.EnableOptimizations = true;
         }
     }

@@ -68,9 +68,9 @@ namespace TopHealthInsurancePlan.Controllers
                     MatchType = Session["Match"] as string ?? null,
                     IpAddress = Session["RemoteIPAddress"] as string ?? null
                 };
-                 var id = _captureService.NewAdminLeadCapture(healthLead, "http://localhost:3431/dataConverstion/capture");
+              //var id = _captureService.NewAdminLeadCapture(healthLead, "http://localhost:3431/dataConverstion/capture");
 
-              //  var id = _captureService.NewAdminLeadCapture(healthLead, "https://api.websearchmedia.co.uk/dataConverstion/capture");
+               var id = _captureService.NewAdminLeadCapture(healthLead, "https://api.websearchmedia.co.uk/dataConverstion/capture");
                 //  var id = _captureService.NewAdminLeadCapture(lead, "");
                 if (id > 0)
                 {
@@ -79,7 +79,7 @@ namespace TopHealthInsurancePlan.Controllers
                 }
                 else
                 {
-                    //return View(model);
+                    return View(model);
 
                 }
                 ThankModel thank = new ThankModel()
@@ -146,10 +146,10 @@ namespace TopHealthInsurancePlan.Controllers
                     MatchType = Session["Match"] as string ?? null,
                     IpAddress = Session["RemoteIPAddress"] as string ?? null
                 };
-                var id = _captureService.NewAdminLeadCapture(lead, "http://localhost:3431/dataConverstion/capture");
+                //var id = _captureService.NewAdminLeadCapture(lead, "http://localhost:3431/dataConverstion/capture");
 
-                //  var id = _captureService.NewAdminLeadCapture(lead, "https://api.websearchmedia.co.uk/dataConverstion/capture");
-                //  var id = _captureService.NewAdminLeadCapture(lead, "");
+                  var id = _captureService.NewAdminLeadCapture(lead, "https://api.websearchmedia.co.uk/dataConverstion/capture");
+                //var id = _captureService.NewAdminLeadCapture(lead, "");
                 if (id > 0)
                 {
                     TempData["LeadId"] = id;
@@ -157,7 +157,7 @@ namespace TopHealthInsurancePlan.Controllers
                 }
                 else
                 {
-                   // return View(model);
+                   return View(model);
 
                 }
                 ThankModel thank = new ThankModel()
@@ -182,6 +182,9 @@ namespace TopHealthInsurancePlan.Controllers
             if (now.Month < birthDate.Month || (now.Month == birthDate.Month && now.Day < birthDate.Day)) age--;
             return age;
         }
-
+        public ActionResult ContactUs()
+        {
+            return View();
+        }
     }
 }
