@@ -402,7 +402,8 @@ form.validating-server-side /* deprecated */ {
 @media (max-width: 768px){
 
     .logo-brand{
-        width:300px;
+        width:100%;
+        padding:0;
     }
 
     .responsive-padding{
