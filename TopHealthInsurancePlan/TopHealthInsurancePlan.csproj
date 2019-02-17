@@ -126,9 +126,11 @@
     <Content Include="Content\img\compare.png" />
     <Content Include="Content\img\compernow.png" />
     <Content Include="Content\img\corporate-bg.png" />
+    <Content Include="Content\img\favicon.jpg" />
     <Content Include="Content\img\get_button.png" />
     <Content Include="Content\img\health.png" />
     <Content Include="Content\img\li_icon2.png" />
+    <Content Include="Content\img\logo.svg" />
     <Content Include="Content\img\save.png" />
     <Content Include="Content\js\bootstrap.bundle.min.js" />
     <Content Include="Content\js\bootstrap.min.js" />
