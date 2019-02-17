@@ -1,8 +1,24 @@
 ﻿@model TopHealthInsurancePlan.Models.ThankModel
 
-@{ 
+@{
     Layout = "~/views/shared/_layoutHome.cshtml";
 }
-<h1>
-    Thank You @Model.Title  @Model.FirstName @Model.LastName
-</h1>
+
+<section class="sliderBody  pb-5">
+    <div class="container bgcolor">
+        <div class="row p-2">
+            <div class="col-12 p-0 position-relative">
+                <div class="slid-leftside thank-youbody text-center">
+                    <h1>
+                        Thank You @Model.Title  @Model.FirstName @Model.LastName
+                        <span class="d-block">for your application</span>
+                    </h1>
+                    <p class="pt-2 pt-md-4">
+                        We just need to ask you a few final questions to give you an accurate quote, and to determine what's best for you.
+                        A friendly healthinsurance adviser will call or email you shortly to discuss further. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

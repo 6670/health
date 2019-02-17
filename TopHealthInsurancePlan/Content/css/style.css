@@ -382,6 +382,14 @@ form.async-validation,
 form.validating-server-side /* deprecated */ {
 }
 
+.thank-youbody{
+    height:400px;
+    padding:50px;
+}
+
+
+
+
 /*--------------Responsive CSS-------------------*/
 
 @media (max-width: 768px){
