@@ -466,4 +466,8 @@ form.validating-server-side /* deprecated */ {
     .res-mb-15{
         margin-bottom:15px;
     }
+    .brand-pic{
+		width:220px;
+		margin:0 auto;
+	}
 }
