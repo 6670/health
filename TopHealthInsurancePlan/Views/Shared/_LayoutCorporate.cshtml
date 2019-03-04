@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Health Insurance</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    @Styles.Render("~/content/css/bundles")
+
+    
+
+
+</head>
+
+<body>
+
+ @Html.Partial("_popupPartial")
+
+    <header class="p-4 pl-0 pr-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="brand-pic">
+                        <a href="@Url.Action("Corporate","Home")"><img src="~/Content/img/logo.jpg" class="logo-brand" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+  @RenderBody()
+
+   @Html.Partial("_footerPartial")
+
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("Script",required:false)
+</body>
+
+</html>
