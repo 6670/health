@@ -52,7 +52,7 @@ header {
 }
 .sliderBody {
     background: url(../img/blood-bg.png) no-repeat;
-    padding: 140px 20px 0 20px;
+    padding: 80px 20px 0 20px;
     background-position: left;
 }
 .sliderBody-corporate {
@@ -480,4 +480,11 @@ form.validating-server-side /* deprecated */ {
 		width:220px;
 		margin:0 auto;
 	}
+}
+.pre-scrollable ul li{
+    line-height: 30px;
+    padding:6px;
+    display: block;
+    font-size:14px;
+    background: none;
 }
