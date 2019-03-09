@@ -186,5 +186,13 @@ namespace TopHealthInsurancePlan.Controllers
         {
             return View();
         }
+        public ActionResult termsAndCondition()
+        {
+            return View();
+        }
+        public ActionResult Privacy()
+        {
+            return View();
+        }
     }
 }

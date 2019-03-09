@@ -35,6 +35,19 @@ namespace TopHealthInsurancePlan
           defaults: new { controller = "Home", action = "thank", id = UrlParameter.Optional }
 
       );
+
+            routes.MapRoute(
+        name: "Privacy Policy",
+        url: "privacyPolicy",
+        defaults: new { controller = "Home", action = "Privacy", id = UrlParameter.Optional }
+
+    );
+            routes.MapRoute(
+     name: "terms And Condition",
+     url: "termsAndCondition",
+     defaults: new { controller = "Home", action = "termsAndCondition", id = UrlParameter.Optional }
+
+ );
             routes.MapRoute(
                name: "Default",
                url: "{controller}/{action}/{id}",
