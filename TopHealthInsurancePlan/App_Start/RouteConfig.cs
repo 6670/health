@@ -12,18 +12,65 @@ namespace TopHealthInsurancePlan
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            #region health
 
-           
             routes.MapRoute(
-           name: "Health",
-           url: "health",
+           name: "Medical",
+           url: "medical",
            defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
        );
             routes.MapRoute(
+                   name: "PrivateHealth",
+                   url: "private-health",
+                   defaults: new { controller = "Home", action = "PrivateHealth", id = UrlParameter.Optional }
+               );
+
+            routes.MapRoute(
+                 name: "FamilyHealth",
+                 url: "family-health",
+                 defaults: new { controller = "Home", action = "familyHealth", id = UrlParameter.Optional }
+             );
+            routes.MapRoute(
+                name: "over50",
+                url: "Over-50s",
+                defaults: new { controller = "Home", action = "Over50", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+               name: "comprehensive",
+               url: "comprehensive",
+               defaults: new { controller = "Home", action = "Comprehensive", id = UrlParameter.Optional }
+           );
+
+            routes.MapRoute(
+               name: "criticalillness",
+               url: "critical-illness",
+               defaults: new { controller = "Home", action = "CriticalIllness", id = UrlParameter.Optional }
+           );
+
+
+            #endregion
+            #region corporate
+
+            routes.MapRoute(
           name: "CorporateHealth",
-          url: "corporatehealth",
+          url: "corporate",
           defaults: new { controller = "Home", action = "Corporate", id = UrlParameter.Optional }
       );
+
+
+            routes.MapRoute(
+          name: "Business",
+          url: "business",
+          defaults: new { controller = "Home", action = "Business", id = UrlParameter.Optional }
+      );
+            routes.MapRoute(
+         name: "Group",
+         url: "group",
+         defaults: new { controller = "Home", action = "Group", id = UrlParameter.Optional }
+     );
+
+
+            #endregion
             routes.MapRoute(
           name: "CpntactUs",
           url: "Contactus",

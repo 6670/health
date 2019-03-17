@@ -14,7 +14,28 @@ namespace TopHealthInsurancePlan.Controllers
         private readonly CaptureService _captureService = new CaptureService();
 
         // GET: Home
+        #region Health
         public ActionResult Index()
+        {
+            return View(new HealthFilterLeadModel());
+        }
+        public ActionResult familyHealth()
+        {
+            return View(new HealthFilterLeadModel());
+        }
+        public ActionResult Over50()
+        {
+            return View(new HealthFilterLeadModel());
+        }
+        public ActionResult Comprehensive()
+        {
+            return View(new HealthFilterLeadModel());
+        }
+        public ActionResult CriticalIllness()
+        {
+            return View(new HealthFilterLeadModel());
+        }
+        public ActionResult PrivateHealth()
         {
             return View(new HealthFilterLeadModel());
         }
@@ -93,11 +114,24 @@ namespace TopHealthInsurancePlan.Controllers
             }
             return View(model);
         }
+
+        #endregion
+        #region CorporateHealth
+
         public ActionResult Corporate()
         {
             return View(new CorporateHealthFilterLeadModel());
         }
-        [HttpPost]
+        public ActionResult Business()
+        {
+            return View(new CorporateHealthFilterLeadModel());
+        }
+        public ActionResult group()
+        {
+            return View(new CorporateHealthFilterLeadModel());
+        }
+        
+       [HttpPost]
         public ActionResult Corporate(CorporateHealthFilterLeadModel model)
         {
             if (ModelState.IsValid)
@@ -171,6 +205,9 @@ namespace TopHealthInsurancePlan.Controllers
             }
             return View(model);
         }
+        #endregion
+
+
         public ActionResult Thank(ThankModel model)
         {
             return View(model);

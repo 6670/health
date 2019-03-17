@@ -190,6 +190,13 @@
     <Content Include="Views\Shared\_LayoutCorporate.cshtml" />
     <Content Include="Views\Home\privacy.cshtml" />
     <Content Include="Views\Home\termsAndCondition.cshtml" />
+    <Content Include="Views\Home\familyHealth.cshtml" />
+    <Content Include="Views\Home\Over50.cshtml" />
+    <Content Include="Views\Home\Comprehensive.cshtml" />
+    <Content Include="Views\Home\CriticalIllness.cshtml" />
+    <Content Include="Views\Home\PrivateHealth.cshtml" />
+    <Content Include="Views\Home\Business.cshtml" />
+    <Content Include="Views\Home\group.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
